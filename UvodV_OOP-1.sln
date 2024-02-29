@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.705
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UvodV_OOP-1", "UvodV_OOP-1\UvodV_OOP-1.csproj", "{03CE3EA3-F4B6-48F9-9A96-50B210AF218D}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.03.21-UprazhnenieKonstruktori", "19.03.21-UprazhnenieKonstruktori\19.03.21-UprazhnenieKonstruktori.csproj", "{7146C6B8-0CAB-4283-A2D7-AAA53A75F33D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point-16.04.21", "Point-16.04.21\Point-16.04.21.csproj", "{2676F132-9EB1-423A-BAB5-D7F141BA6160}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectDice", "ProjectDice\ProjectDice.csproj", "{5269E9E2-32E2-44F7-BE4E-C3C673F136D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{2676F132-9EB1-423A-BAB5-D7F141BA6160}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2676F132-9EB1-423A-BAB5-D7F141BA6160}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2676F132-9EB1-423A-BAB5-D7F141BA6160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5269E9E2-32E2-44F7-BE4E-C3C673F136D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5269E9E2-32E2-44F7-BE4E-C3C673F136D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5269E9E2-32E2-44F7-BE4E-C3C673F136D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5269E9E2-32E2-44F7-BE4E-C3C673F136D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
