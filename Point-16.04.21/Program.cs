@@ -10,8 +10,7 @@ using System.Threading.Tasks;
  * Да се създаде масив от 10 (или n на брой) точки и да се намери най-малкото разстояние между кои да е две от тях.
  */
 namespace Point_16._04._21
-{
-    
+{    
     class Program
     {
         #region 9a
@@ -58,50 +57,21 @@ namespace Point_16._04._21
 
         static void Main(string[] args)
         {
-            #region 9aMain
-            //Point[] points = new Point[10];
 
-            //Random random = new Random();
-            //for (int i = 0; i < points.Length; i++)
-            //{
-            //    points[i] = new Point();
-            //    points[i] = GenerateCoords(points[i], random);
-            //}
-
-            //DisplayPointsArray(points);
-
-            //Console.WriteLine();
-            //Console.WriteLine("Minimal distance between points: {0}", MinDistanse(points));
-
-            //int n = random.Next(3, 10);
-            //Point[] newPointsArray = new Point[n];
-
-            ////!!! Problem - generates equal coordinates - all zeros!!!
-            ////To correct it -> see class ctor, set, get!!!
-
-            //for (int i = 0; i < newPointsArray.Length; i++)
-            //{
-            //    double x = random.Next(-100, 100) * random.NextDouble();
-            //    double y = random.Next(-100, 100) * random.NextDouble();
-            //    newPointsArray[i] = new Point(x, y);
-            //}
-
-            //DisplayPointsArray(newPointsArray);
-            //Console.WriteLine();
-            //Console.WriteLine("Minimal distance between points: {0}", MinDistanse(newPointsArray));
-            #endregion
-
-            #region 9bMain
+            #region Main
             Point A = new Point();
             Console.WriteLine($"x = {A.X}, y = {A.Y}");
 
             Point B = new Point(0, 5);
             Console.WriteLine($"x = {B.X}, y = {B.Y}");
 
+            //Apply two methods to calculate distance:
+
             Console.WriteLine($"Distance between points: {Distance(A, B)}");
+            Console.WriteLine($"Distance between points: {A.DistanceInClass(B)}");
 
 
-            Point[] points = new Point[10];                //points[i].X; points[i].Y
+            Point[]points = new Point[10];                //points[i].X; points[i].Y
             Random random = new Random(); ////////!!!!!!!
             for (int i = 0; i < points.Length; i++)
             {
@@ -112,21 +82,39 @@ namespace Point_16._04._21
             {
                 Console.WriteLine($"x = {item.X}, y = {item.Y}");
             }
+
+            Console.WriteLine("Min distance between points on tharray is: " + MinDistance(points));
+            
             #endregion
 
             Console.ReadKey();
         }
 
-        #region 9bMethods
+        #region Methods
         static double Distance(Point A, Point B)
         {
             return Math.Sqrt(Math.Pow(A.X - B.X, 2) + Math.Pow(A.Y - B.Y, 2));
         }
 
-        static Point GenerateRandomPoint(Random random) /////////!!!!!!!!
+        static Point GenerateRandomPoint(Random random) 
         {
             Point point = new Point(random.Next(-100, 100) * random.NextDouble(), random.Next(-100, 100) * random.NextDouble());
             return point;
+        }
+
+        static double MinDistance(Point[] points)
+        {
+            double minDistance = Distance(points[0], points[1]);
+            for (int i = 0; i < points.Length - 1; i++)
+            {                
+                for (int j = i + 1; j < points.Length; j++)
+                {
+                    double nextDistance = Distance(points[i], points[j]);
+                    if (nextDistance < minDistance)
+                        minDistance = nextDistance;
+                }
+            }
+            return minDistance;
         }
         #endregion
     }

@@ -13,54 +13,35 @@ namespace Point_16._04._21
 {
     class Point
     {
-        #region 9aClass
-        private double x;
-        private double y;
-
-        public Point()
-        {
-            this.x = 0;
-            this.y = 0;
-        }
+        
+        private double _x;
+        private double _y;
 
         public Point(double x, double y)
         {
-            this.x = x;
-            this.y = y;
+            this._x = x;
+            this._y = y;
+        }
+        public Point()
+        {
+            this._x = 0;
+            this._y = 0;
         }
 
-        public double X { set; get; }
+        public double X
+        {
+            get { return this._x; }
+            set { this._x = value; }
+        }
+        public double Y
+        {
+            get { return this._y; }
+            set { this._y = value; }
+        }
 
-        public double Y { set; get; }
-
-        #endregion
-    
-        #region 9bClass
-        //private double _x;
-        //private double _y;
-
-        //public Point(double x, double y)
-        //{
-        //    this._x = x;
-        //    this._y = y;
-        //}
-        //public Point()
-        //{
-        //    this._x = 0;
-        //    this._y = 0;
-        //}
-
-        //public double X
-        //{
-        //    get { return this._x; }
-        //    set { this._x = value; }
-        //}        
-
-        //public double Y
-        //{
-        //    get { return this._y; }
-        //    set { this._y = value; }
-        //}
-        #endregion
+        public double DistanceInClass(Point A)  
+        {
+            return Math.Sqrt(Math.Pow(this.X-A.X,2) + Math.Pow(this.Y-A.Y, 2));
+        }       
     }
 }
